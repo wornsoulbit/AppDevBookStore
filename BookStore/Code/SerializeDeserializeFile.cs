@@ -34,8 +34,91 @@ namespace BookStore.Code {
             return new SerializeDeserializeFile();
         }
 
+        public void SerializeObjects(BookStoreInterface bookStoreInterface)
+        {
+            //Opens a dialog box to save to a file and create it if it doesn't exists.
+            SaveToFileDialog();
+
+            //Tries to Serialize the data to a given file.
+            try
+            {
+                formatter.Serialize(output, bookStoreInterface);
+            }
+            catch (SerializationException)
+            {
+                MessageBox.Show("Error Writing to File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void DeserializeObjbects()
+        {
+            OpenFileDialog();
+
+            while (true)
+            {
+                try
+                {
+                    BookStoreInterface bookStoreInterface = (BookStoreInterface)formatter.Deserialize(input);
+
+                    foreach (Book book in bookStoreInterface.Book)
+                    {
+                        if (book.SerialNum != string.Empty)
+                        {
+                            string[] values = new string[]
+                            {
+                            book.SerialNum.ToString(),
+                            book.Title.ToString(),
+                            book.Author.ToString(),
+                            book.Price.ToString()
+                            };
+
+                            books.Add(new Book(values[0], values[1], values[2], Double.Parse(values[3])));
+                        }
+                    }
+
+                    foreach (Customer cust in bookStoreInterface.Customer)
+                    {
+                        if (cust.CustId > 0)
+                        {
+                            string[] values = new string[]
+                            {
+                            cust.CustId.ToString(),
+                            cust.CustName.ToString(),
+                            cust.CustCreditCard.ToString()
+                            };
+
+                            customers.Add(new Customer(Int32.Parse(values[0]), values[1], values[2]));
+                        }
+                    }
+
+                    if (bookStoreInterface.BookStore.BookSerialNum != string.Empty)
+                    {
+                        string[] values = new string[]
+                        {
+                            bookStoreInterface.BookStore.BookSerialNum.ToString(),
+                            bookStoreInterface.BookStore.BookId.ToString(),
+                            bookStoreInterface.BookStore.CustId.ToString()
+                        };
+
+                        bookStores.Add(new BookStore(Int32.Parse(values[2]), Int32.Parse(values[1]), values[0]));
+                    }
+                }
+                catch (SerializationException)
+                {
+                    input.Close();
+                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
+        //Probably will be replaced need to test the new methods 
+        //DO NOT REMOVE until new methods are tested.
         #region Serializing Objects
-        public void SerializeBooks(List<Book> books)
+        private void SerializeBooks(List<Book> books)
         {
             //Opens a dialog box to save to a file and create it if it doesn't exists.
             SaveToFileDialog();
@@ -58,7 +141,7 @@ namespace BookStore.Code {
             }
         }
 
-        public void SerializeCustomers(List<Customer> customers)
+        private void SerializeCustomers(List<Customer> customers)
         {
             //Opens a dialog box to save to a file and create it if it doesn't exists.
             SaveToFileDialog();
@@ -81,7 +164,7 @@ namespace BookStore.Code {
             }
         }
 
-        public void SerializeBookStore(List<BookStore> bookStores)
+        private void SerializeBookStore(List<BookStore> bookStores)
         {
             //Opens a dialog box to save to a file and create it if it doesn't exists.
             SaveToFileDialog();
@@ -104,7 +187,6 @@ namespace BookStore.Code {
             }
         }
         #endregion
-
         #region Deserializing Objects
         public void DeserializeBooks()
         {
@@ -200,7 +282,7 @@ namespace BookStore.Code {
             }
         }
         #endregion
-
+        //end comment.
         public void OpenFileDialog()
         {
             DialogResult result;
