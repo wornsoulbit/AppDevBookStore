@@ -108,28 +108,7 @@ namespace BookStore.Code {
         #region Deserializing Objects
         public void DeserializeBooks()
         {
-            //Gets the file to deserialize from.
-            DialogResult result;
-            string fileName;
-
-            using (OpenFileDialog fileChooser = new OpenFileDialog())
-            {
-                result = fileChooser.ShowDialog();
-                fileName = fileChooser.FileName;
-            }
-
-            if (result == DialogResult.OK)
-            {
-
-                if (fileName == string.Empty)
-                {
-                    MessageBox.Show("Invalid File Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-                }
-            }
+            OpenFileDialog();
 
             while (true)
             {
@@ -158,7 +137,95 @@ namespace BookStore.Code {
                 }
             }
         }
+
+        public void DeserializeCustomers()
+        {
+            OpenFileDialog();
+
+            while (true)
+            {
+                try
+                {
+                    Customer book = (Customer)formatter.Deserialize(input);
+
+                    if (book.CustId > 0)
+                    {
+                        string[] values = new string[]
+                        {
+                            book.CustId.ToString(),
+                            book.CustName.ToString(),
+                            book.CustCreditCard.ToString()
+                        };
+
+                        customers.Add(new Customer(Int32.Parse(values[0]), values[1], values[2]));
+                    }
+                }
+                catch (SerializationException)
+                {
+                    input.Close();
+                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
+
+        public void DeserializeBookStore()
+        {
+            OpenFileDialog();
+
+            while (true)
+            {
+                try
+                {
+                    BookStore book = (BookStore)formatter.Deserialize(input);
+
+                    if (book.BookSerialNum != string.Empty)
+                    {
+                        string[] values = new string[]
+                        {
+                            book.BookSerialNum.ToString(),
+                            book.BookId.ToString(),
+                            book.CustId.ToString()
+                        };
+
+                        bookStores.Add(new BookStore(Int32.Parse(values[2]), Int32.Parse(values[1]), values[0]));
+                    }
+                }
+                catch (SerializationException)
+                {
+                    input.Close();
+                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
         #endregion
+
+        public void OpenFileDialog()
+        {
+            DialogResult result;
+            string fileName;
+
+            using (OpenFileDialog fileChooser = new OpenFileDialog())
+            {
+                result = fileChooser.ShowDialog();
+                fileName = fileChooser.FileName;
+            }
+
+            if (result == DialogResult.OK)
+            {
+
+                if (fileName == string.Empty)
+                {
+                    MessageBox.Show("Invalid File Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                }
+            }
+        }
+
         public void SaveToFileDialog()
         {
             DialogResult result;
