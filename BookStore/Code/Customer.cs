@@ -9,9 +9,10 @@ namespace BookStore {
     class Customer {
         public int CustId { get; set; }
         public string CustName { get; set; }
+        public string CustCreditCard { get; set; }
 
         public Customer() { }
         
-        public Customer(int custId, string custName) { }
+        public Customer(int custId, string custName, string custCreditCard) { }
     }
 }
