@@ -17,15 +17,14 @@ namespace BookStore
             InitializeComponent();
         }
 
-        private void BorrowButton_Click(object sender, EventArgs e)
-        {
-            PersonalInfo info = new PersonalInfo();
-            info.Show();
-        }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
