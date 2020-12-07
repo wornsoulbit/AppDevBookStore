@@ -28,9 +28,9 @@ namespace BookStore.Code {
             return serializeDeserialize;
         }
 
-        private static SerializeDeserializeFile CreateInstance()
+        private static void CreateInstance()
         {
-            return new SerializeDeserializeFile();
+            serializeDeserialize = new SerializeDeserializeFile();
         }
 
         public void SerializeObjects(BookStoreInterface bookStoreInterface)
