@@ -36,7 +36,7 @@ namespace BookStore
             this.label3 = new System.Windows.Forms.Label();
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.AuthorTextbox = new System.Windows.Forms.TextBox();
-            this.QualityTextbox = new System.Windows.Forms.TextBox();
+            this.CardNumberTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BuyButton
@@ -79,39 +79,39 @@ namespace BookStore
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 88);
+            this.label3.Location = new System.Drawing.Point(34, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Quality:";
+            this.label3.Text = "Card Number:";
             // 
             // NameTextbox
             // 
             this.NameTextbox.Location = new System.Drawing.Point(113, 33);
             this.NameTextbox.Name = "NameTextbox";
-            this.NameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.NameTextbox.Size = new System.Drawing.Size(143, 20);
             this.NameTextbox.TabIndex = 5;
             // 
             // AuthorTextbox
             // 
             this.AuthorTextbox.Location = new System.Drawing.Point(113, 59);
             this.AuthorTextbox.Name = "AuthorTextbox";
-            this.AuthorTextbox.Size = new System.Drawing.Size(100, 20);
+            this.AuthorTextbox.Size = new System.Drawing.Size(143, 20);
             this.AuthorTextbox.TabIndex = 6;
             // 
-            // QualityTextbox
+            // CardNumberTextbox
             // 
-            this.QualityTextbox.Location = new System.Drawing.Point(113, 85);
-            this.QualityTextbox.Name = "QualityTextbox";
-            this.QualityTextbox.Size = new System.Drawing.Size(100, 20);
-            this.QualityTextbox.TabIndex = 7;
+            this.CardNumberTextbox.Location = new System.Drawing.Point(113, 85);
+            this.CardNumberTextbox.Name = "CardNumberTextbox";
+            this.CardNumberTextbox.Size = new System.Drawing.Size(143, 20);
+            this.CardNumberTextbox.TabIndex = 7;
             // 
             // Buy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 173);
-            this.Controls.Add(this.QualityTextbox);
+            this.Controls.Add(this.CardNumberTextbox);
             this.Controls.Add(this.AuthorTextbox);
             this.Controls.Add(this.NameTextbox);
             this.Controls.Add(this.label3);
@@ -135,6 +135,6 @@ namespace BookStore
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox NameTextbox;
         private System.Windows.Forms.TextBox AuthorTextbox;
-        private System.Windows.Forms.TextBox QualityTextbox;
+        private System.Windows.Forms.TextBox CardNumberTextbox;
     }
 }

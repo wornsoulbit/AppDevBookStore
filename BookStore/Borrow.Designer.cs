@@ -39,11 +39,13 @@ namespace BookStore
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BookNameTextbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(146, 139);
+            this.ExitButton.Location = new System.Drawing.Point(164, 182);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 15;
@@ -52,7 +54,7 @@ namespace BookStore
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(41, 139);
+            this.SubmitButton.Location = new System.Drawing.Point(33, 182);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 14;
@@ -63,21 +65,21 @@ namespace BookStore
             // 
             this.ContactTextbox.Location = new System.Drawing.Point(122, 82);
             this.ContactTextbox.Name = "ContactTextbox";
-            this.ContactTextbox.Size = new System.Drawing.Size(100, 20);
+            this.ContactTextbox.Size = new System.Drawing.Size(117, 20);
             this.ContactTextbox.TabIndex = 13;
             // 
             // LastnameTextbox
             // 
             this.LastnameTextbox.Location = new System.Drawing.Point(122, 50);
             this.LastnameTextbox.Name = "LastnameTextbox";
-            this.LastnameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.LastnameTextbox.Size = new System.Drawing.Size(117, 20);
             this.LastnameTextbox.TabIndex = 12;
             // 
             // FirstnameTextbox
             // 
             this.FirstnameTextbox.Location = new System.Drawing.Point(122, 18);
             this.FirstnameTextbox.Name = "FirstnameTextbox";
-            this.FirstnameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.FirstnameTextbox.Size = new System.Drawing.Size(117, 20);
             this.FirstnameTextbox.TabIndex = 11;
             // 
             // label3
@@ -120,14 +122,32 @@ namespace BookStore
             // 
             this.BookNameTextbox.Location = new System.Drawing.Point(122, 108);
             this.BookNameTextbox.Name = "BookNameTextbox";
-            this.BookNameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.BookNameTextbox.Size = new System.Drawing.Size(117, 20);
             this.BookNameTextbox.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(44, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Card Number:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(122, 137);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(117, 20);
+            this.textBox1.TabIndex = 19;
             // 
             // Borrow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 182);
+            this.ClientSize = new System.Drawing.Size(275, 245);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.BookNameTextbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ExitButton);
@@ -157,5 +177,7 @@ namespace BookStore
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox BookNameTextbox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
