@@ -43,7 +43,7 @@ namespace BookStore
             // 
             // SellButton
             // 
-            this.SellButton.Location = new System.Drawing.Point(9, 153);
+            this.SellButton.Location = new System.Drawing.Point(51, 129);
             this.SellButton.Name = "SellButton";
             this.SellButton.Size = new System.Drawing.Size(75, 23);
             this.SellButton.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace BookStore
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(132, 153);
+            this.ExitButton.Location = new System.Drawing.Point(174, 129);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace BookStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 203);
+            this.ClientSize = new System.Drawing.Size(261, 179);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
