@@ -15,6 +15,7 @@ namespace BookStore.Code {
         private FileStream output;
         private FileStream input;
 
+        #region Serializing Objects
         public void SerializeBooks(List<Book> books)
         {
             //Opens a dialog box to save to a file and create it if it doesn't exists.
@@ -82,7 +83,35 @@ namespace BookStore.Code {
                 MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Deserializing Objects
+        public void DeserializeBooks()
+        {
+            //Gets the file to deserialize from.
+            DialogResult result;
+            string fileName;
+
+            using (OpenFileDialog fileChooser = new OpenFileDialog())
+            {
+                result = fileChooser.ShowDialog();
+                fileName = fileChooser.FileName;
+            }
+
+            if (result == DialogResult.OK)
+            {
+
+                if (fileName == string.Empty)
+                {
+                    MessageBox.Show("Invalid File Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                }
+            }
+        }
+        #endregion
         public void SaveToFileDialog()
         {
             DialogResult result;

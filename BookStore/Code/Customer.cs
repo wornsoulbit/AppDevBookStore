@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace BookStore {
     [Serializable]
     class Customer {
-        private int custId;
-        private string custName;
+        public int CustId { get; set; }
+        public string CustName { get; set; }
 
         public Customer() { }
         
