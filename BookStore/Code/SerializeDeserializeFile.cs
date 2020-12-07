@@ -1,19 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookStore.Code {
     class SerializeDeserializeFile {
-        
+
+        SerializeDeserializeFile serializeDeserialize;
+
+        //Storing the deserialized outputs from the deserialization process.
+        private List<Book> books = new List<Book>();
+        private List<Customer> customers = new List<Customer>();
+        private List<BookStore> bookStores = new List<BookStore>();
+
         private BinaryFormatter formatter = new BinaryFormatter();
         private FileStream output;
         private FileStream input;
+
+        public SerializeDeserializeFile getInstance()
+        {
+            if (serializeDeserialize == null)
+            {
+                createInstance();
+            }
+
+            return serializeDeserialize;
+        }
+
+        private SerializeDeserializeFile createInstance()
+        {
+            return new SerializeDeserializeFile();
+        }
 
         #region Serializing Objects
         public void SerializeBooks(List<Book> books)
@@ -24,7 +43,8 @@ namespace BookStore.Code {
             //Tries to Serialize the data to a given file.
             try
             {
-                foreach (Book book in books) {
+                foreach (Book book in books)
+                {
                     formatter.Serialize(output, book);
                 }
             }
@@ -108,6 +128,33 @@ namespace BookStore.Code {
                 else
                 {
                     input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                }
+            }
+
+            while (true)
+            {
+                try
+                {
+                    Book book = (Book)formatter.Deserialize(input);
+
+                    if (book.SerialNum != string.Empty)
+                    {
+                        string[] values = new string[]
+                        {
+                            book.SerialNum.ToString(),
+                            book.Title.ToString(),
+                            book.Author.ToString(),
+                            book.Price.ToString()
+                        };
+
+                        books.Add(new Book(values[0], values[1], values[2], Double.Parse(values[3])));
+                    }
+                }
+                catch (SerializationException)
+                {
+                    input.Close();
+                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
         }
