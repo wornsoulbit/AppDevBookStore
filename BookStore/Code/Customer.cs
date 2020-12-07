@@ -10,15 +10,8 @@ namespace BookStore {
         private int custId;
         private string custName;
 
-        public Customer()
-        {
-
-        }
+        public Customer() { }
         
-        public Customer(int custId, string custName)
-        {
-            this.custId = custId;
-            this.custName = custName;
-        }
+        public Customer(int custId, string custName) { }
     }
 }

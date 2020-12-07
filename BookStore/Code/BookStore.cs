@@ -11,16 +11,8 @@ namespace BookStore {
         private int custId;
         private string bookSerialNum;
 
-        public BookStore()
-        {
+        public BookStore() { }
 
-        }
-
-        public BookStore(int bookId, int custId, string bookSerialNum)
-        {
-            this.bookId = bookId;
-            this.custId = custId;
-            this.bookSerialNum = bookSerialNum;
-        }
+        public BookStore(int bookId, int custId, string bookSerialNum) { }
     }
 }

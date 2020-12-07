@@ -7,23 +7,14 @@ using System.Threading.Tasks;
 namespace BookStore {
     [Serializable]
     class Book {
-        private string serialNum;
-        private string title;
-        private string author;
-        private double price;
+        public string SerialNum { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public double Price { get; set; }
 
-        public Book()
-        {
+        public Book() { }
 
-        }
-
-        public Book(string serialNum, string title, string author, double price)
-        {
-            this.serialNum = serialNum;
-            this.title = title;
-            this.author = author;
-            this.price = price;
-        }
+        public Book(string serialNum, string title, string author, double price) { }
 
     }
 }
