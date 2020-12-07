@@ -60,6 +60,7 @@
     <Compile Include="Buy.Designer.cs">
       <DependentUpon>Buy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Code\BookStoreInterface.cs" />
     <Compile Include="Code\Customer.cs" />
     <Compile Include="Code\SerializeDeserializeFile.cs" />
     <Compile Include="Form1.cs">

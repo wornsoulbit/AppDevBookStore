@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BookStore
 {
     public partial class Buy : Form
@@ -20,6 +21,11 @@ namespace BookStore
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BuyButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

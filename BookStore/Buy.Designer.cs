@@ -47,6 +47,7 @@ namespace BookStore
             this.BuyButton.TabIndex = 0;
             this.BuyButton.Text = "Buy";
             this.BuyButton.UseVisualStyleBackColor = true;
+            this.BuyButton.Click += new System.EventHandler(this.BuyButton_Click);
             // 
             // ExitButton
             // 

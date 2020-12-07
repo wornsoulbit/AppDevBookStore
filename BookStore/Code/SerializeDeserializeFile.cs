@@ -25,7 +25,6 @@ namespace BookStore.Code {
             {
                 createInstance();
             }
-
             return serializeDeserialize;
         }
 

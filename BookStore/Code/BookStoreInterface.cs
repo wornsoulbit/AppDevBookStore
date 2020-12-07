@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.Code {
+namespace BookStore.Code
+{
     [Serializable]
-    class BookStoreInterface {
+    class BookStoreInterface
+    {
         public List<Book> Book { get; set; }
         public BookStore BookStore { get; set; }
-        public List<Customer> Customer {  get; set; }
+        public List<Customer> Customer { get; set; }
 
         public BookStoreInterface() { }
 
