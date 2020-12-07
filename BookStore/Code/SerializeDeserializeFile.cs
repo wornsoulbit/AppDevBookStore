@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace BookStore.Code {
     class SerializeDeserializeFile {
 
-        SerializeDeserializeFile serializeDeserialize;
+        private static SerializeDeserializeFile serializeDeserialize;
 
         //Storing the deserialized outputs from the deserialization process.
         private List<Book> books = new List<Book>();
@@ -19,7 +19,7 @@ namespace BookStore.Code {
         private FileStream output;
         private FileStream input;
 
-        public SerializeDeserializeFile GetInstance()
+        public static SerializeDeserializeFile GetInstance()
         {
             if (serializeDeserialize == null)
             {
@@ -28,7 +28,7 @@ namespace BookStore.Code {
             return serializeDeserialize;
         }
 
-        private SerializeDeserializeFile CreateInstance()
+        private static SerializeDeserializeFile CreateInstance()
         {
             return new SerializeDeserializeFile();
         }
