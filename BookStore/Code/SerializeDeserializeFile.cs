@@ -19,16 +19,16 @@ namespace BookStore.Code {
         private FileStream output;
         private FileStream input;
 
-        public SerializeDeserializeFile getInstance()
+        public SerializeDeserializeFile GetInstance()
         {
             if (serializeDeserialize == null)
             {
-                createInstance();
+                CreateInstance();
             }
             return serializeDeserialize;
         }
 
-        private SerializeDeserializeFile createInstance()
+        private SerializeDeserializeFile CreateInstance()
         {
             return new SerializeDeserializeFile();
         }
@@ -61,6 +61,7 @@ namespace BookStore.Code {
             {
                 try
                 {
+                    //Deserializes book objects.
                     BookStoreInterface bookStoreInterface = (BookStoreInterface)formatter.Deserialize(input);
 
                     foreach (Book book in bookStoreInterface.Book)
@@ -79,6 +80,7 @@ namespace BookStore.Code {
                         }
                     }
 
+                    //Deserializes Customer objects.
                     foreach (Customer cust in bookStoreInterface.Customer)
                     {
                         if (cust.CustId > 0)
@@ -94,6 +96,7 @@ namespace BookStore.Code {
                         }
                     }
 
+                    //Deserializes BookStore objects.
                     if (bookStoreInterface.BookStore.BookSerialNum != string.Empty)
                     {
                         string[] values = new string[]
