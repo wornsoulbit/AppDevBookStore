@@ -34,7 +34,7 @@ namespace BookStore
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             int days = (int)DaysNum.Value;
-            BorrowedBooks b = new BorrowedBooks(bList[count].SerialNum, bList[count].Title, bList[count].Author, days);
+            BorrowedBooks b = new BorrowedBooks(bList[count].SerialNum, bList[count].Title, bList[count].Author, days, bList[count].Price);
 
             borrowList.Add(b);
             bList.Remove(bList[count]);
