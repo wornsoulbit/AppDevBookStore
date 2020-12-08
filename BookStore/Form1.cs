@@ -33,7 +33,7 @@ namespace BookStore
 
         private void StoreChooseButton_Click(object sender, EventArgs e)
         {
-            serializer.DeserializeObjbects();
+            BookStore bStore = serializer.DeserializeObjbects();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
