@@ -52,7 +52,6 @@ namespace BookStore
 
         private void CatalogButton_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             serializer.DeserializeObjbects();
             cList = serializer.GetCustomerList();
             bList = serializer.GetBookList();
@@ -66,20 +65,6 @@ namespace BookStore
                 SubmitButton.Enabled = true;
             }
             ShowDetails();
-=======
-            try
-            {
-                serializer.DeserializeObjbects();
-                cList = serializer.GetCustomerList();
-                bList = serializer.GetBookList();
-                borrowList = serializer.GetBorrowedBooks();
-                ShowDetails();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Sorry, but this book is not in the catalog!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
->>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
         }
 
         private void NextButton_Click(object sender, EventArgs e)
