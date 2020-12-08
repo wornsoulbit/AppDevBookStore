@@ -49,6 +49,11 @@ namespace BookStore.Code {
             return bookStores;
         }
 
+        public List<BorrowedBooks> GetBorrowedBooks()
+        {
+            return borrowBooks;
+        }
+
         public void SerializeObjects(BookStoreInterface bookStoreInterface)
         {
             //Opens a dialog box to save to a file and create it if it doesn't exists.
@@ -103,19 +108,18 @@ namespace BookStore.Code {
                             books.Add(new Book(values[0], values[1], values[2], Double.Parse(values[3])));
                         }
                     }
-
-                    foreach(BorrowedBooks bor in bookStoreInterface.Borrow)
+                    
+                    foreach (BorrowedBooks book in bookStoreInterface.Borrow)
                     {
-                        if(bor.SerialNum != string.Empty)
+                        string[] values = new string[]
                         {
-                            string[] values = new string[]
-                            {
-                                bor.SerialNum.ToString(),
-                                bor.Author.ToString(),
-                                bor.Title.ToString(),
-                                bor.Days.ToString(),
-                            };
-                        }
+                            book.SerialNum.ToString(),
+                            book.Title.ToString(),
+                            book.Author.ToString(),
+                            book.Days.ToString()
+                        };
+
+                        borrowBooks.Add(new BorrowedBooks(values[0], values[1], values[2], Int32.Parse(values[3])));
                     }
 
                     //Deserializes Customer objects.
@@ -157,174 +161,7 @@ namespace BookStore.Code {
                 }
             }
         }
-        //Probably will be replaced need to test the new methods 
-        //DO NOT REMOVE until new methods are tested.
-        #region Serializing Objects
-        private void SerializeBooks(List<Book> books)
-        {
-            //Opens a dialog box to save to a file and create it if it doesn't exists.
-            SaveToFileDialog();
-
-            //Tries to Serialize the data to a given file.
-            try
-            {
-                foreach (Book book in books)
-                {
-                    formatter.Serialize(output, book);
-                }
-            }
-            catch (SerializationException)
-            {
-                MessageBox.Show("Error Writing to File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void SerializeCustomers(List<Customer> customers)
-        {
-            //Opens a dialog box to save to a file and create it if it doesn't exists.
-            SaveToFileDialog();
-
-            //Tries to Serialize the data to a given file.
-            try
-            {
-                foreach (Customer cust in customers)
-                {
-                    formatter.Serialize(output, cust);
-                }
-            }
-            catch (SerializationException)
-            {
-                MessageBox.Show("Error Writing to File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void SerializeBookStore(List<BookStore> bookStores)
-        {
-            //Opens a dialog box to save to a file and create it if it doesn't exists.
-            SaveToFileDialog();
-
-            //Tries to Serialize the data to a given file.
-            try
-            {
-                foreach (BookStore bookStore in bookStores)
-                {
-                    formatter.Serialize(output, bookStore);
-                }
-            }
-            catch (SerializationException)
-            {
-                MessageBox.Show("Error Writing to File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-        #region Deserializing Objects
-        public void DeserializeBooks()
-        {
-            OpenFileDialog();
-
-            while (true)
-            {
-                try
-                {
-                    Book book = (Book)formatter.Deserialize(input);
-
-                    if (book.SerialNum != string.Empty)
-                    {
-                        string[] values = new string[]
-                        {
-                            book.SerialNum.ToString(),
-                            book.Title.ToString(),
-                            book.Author.ToString(),
-                            book.Price.ToString()
-                        };
-
-                        books.Add(new Book(values[0], values[1], values[2], Double.Parse(values[3])));
-                    }
-                }
-                catch (SerializationException)
-                {
-                    input.Close();
-                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-            }
-        }
-
-        public void DeserializeCustomers()
-        {
-            OpenFileDialog();
-
-            while (true)
-            {
-                try
-                {
-                    Customer book = (Customer)formatter.Deserialize(input);
-
-                    if (book.CustId > 0)
-                    {
-                        string[] values = new string[]
-                        {
-                            book.CustId.ToString(),
-                            book.CustName.ToString(),
-                            book.CustCreditCard.ToString()
-                        };
-
-                        customers.Add(new Customer(Int32.Parse(values[0]), values[1], values[2]));
-                    }
-                }
-                catch (SerializationException)
-                {
-                    input.Close();
-                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-            }
-        }
-
-        public void DeserializeBookStore()
-        {
-            OpenFileDialog();
-
-            while (true)
-            {
-                try
-                {
-                    BookStore book = (BookStore)formatter.Deserialize(input);
-
-                    if (book.BookSerialNum != string.Empty)
-                    {
-                        string[] values = new string[]
-                        {
-                            book.BookSerialNum.ToString(),
-                            book.BookId.ToString(),
-                            book.CustId.ToString()
-                        };
-
-                        bookStores.Add(new BookStore(Int32.Parse(values[2]), Int32.Parse(values[1]), values[0]));
-                    }
-                }
-                catch (SerializationException)
-                {
-                    input.Close();
-                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-            }
-        }
-        #endregion
-        //end comment.
+        
         public void OpenFileDialog()
         {
             DialogResult result;
