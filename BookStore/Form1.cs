@@ -13,6 +13,9 @@ namespace BookStore
     
     public partial class Main : Form
     {
+        List<Book> bList = new List<Book>();
+        int count = 0;
+
         Code.SerializeDeserializeFile serializer = Code.SerializeDeserializeFile.GetInstance();
         public Main()
         {
@@ -33,11 +36,31 @@ namespace BookStore
 
         private void StoreChooseButton_Click(object sender, EventArgs e)
         {
-            BookStore bStore = serializer.DeserializeObjbects();
+            serializer.DeserializeObjbects();
+            bList = serializer.GetBookList();
+            ShowDetails();
+        }
+
+        private void ShowDetails()
+        {
+            NameTextbox.Text = bList[count].Title;
+            AuthorTextbox.Text = bList[count].Author;
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            int checker = bList.Count();
+            checker--;
+            if(count < checker)
+            {
+                count++;
+                ShowDetails();
+            }
+            else
+            {
+                count = 0;
+                ShowDetails();
+            }
 
         }
 
