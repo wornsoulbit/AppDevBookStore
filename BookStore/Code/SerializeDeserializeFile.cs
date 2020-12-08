@@ -51,6 +51,7 @@ namespace BookStore.Code {
             {
                 MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            output.Close();
         }
 
         public void DeserializeObjbects()
@@ -115,6 +116,7 @@ namespace BookStore.Code {
                     MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+                input.Close();
             }
         }
         //Probably will be replaced need to test the new methods 

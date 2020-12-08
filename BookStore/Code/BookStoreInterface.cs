@@ -15,6 +15,11 @@ namespace BookStore.Code
 
         public BookStoreInterface() { }
 
-        public BookStoreInterface(List<Book> book, BookStore bookStore, List<Customer> customer) { }
+        public BookStoreInterface(List<Book> book, BookStore bookStore, List<Customer> customer) 
+        { 
+            Book = book; 
+            BookStore = bookStore;
+            Customer = customer;
+        }
     }
 }

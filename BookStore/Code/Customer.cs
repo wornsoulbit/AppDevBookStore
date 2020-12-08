@@ -13,6 +13,11 @@ namespace BookStore {
 
         public Customer() { }
         
-        public Customer(int custId, string custName, string custCreditCard) { }
+        public Customer(int custId, string custName, string custCreditCard) 
+        {
+            CustId = custId;
+            CustName = custName;
+            CustCreditCard = custCreditCard;
+        }
     }
 }
