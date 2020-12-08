@@ -56,11 +56,18 @@ namespace BookStore
 
         private void CatalogButton_Click(object sender, EventArgs e)
         {
-            serializer.DeserializeObjbects();
-            cList = serializer.GetCustomerList();
-            bList = serializer.GetBookList();
-            borrowList = serializer.GetBorrowedBooks();
-            ShowDetails();
+            try
+            {
+                serializer.DeserializeObjbects();
+                cList = serializer.GetCustomerList();
+                bList = serializer.GetBookList();
+                borrowList = serializer.GetBorrowedBooks();
+                ShowDetails();
+            } 
+            catch (Exception)
+            {
+                MessageBox.Show("Sorry, but this book is not in the catalog!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Borrow_Load(object sender, EventArgs e)
