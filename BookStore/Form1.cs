@@ -50,6 +50,8 @@ namespace BookStore
         {
             NameTextbox.Text = bList[count].Title;
             AuthorTextbox.Text = bList[count].Author;
+            SnTextbox.Text = bList[count].SerialNum;
+            PriceTextbox.Text = bList[count].Price.ToString();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
