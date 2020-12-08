@@ -170,6 +170,7 @@ namespace BookStore
             this.BuyButton.TabIndex = 13;
             this.BuyButton.Text = "Buy";
             this.BuyButton.UseVisualStyleBackColor = true;
+            this.BuyButton.Click += new System.EventHandler(this.BuyButton_Click);
             // 
             // StoreChooseButton
             // 
