@@ -31,7 +31,6 @@ namespace BookStore
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.functionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +43,8 @@ namespace BookStore
             this.QualityTextbox = new System.Windows.Forms.TextBox();
             this.PriceTextbox = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.BuyButton = new System.Windows.Forms.Button();
+            this.StoreChooseButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,19 +62,11 @@ namespace BookStore
             // functionsToolStripMenuItem
             // 
             this.functionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buyToolStripMenuItem,
             this.sellToolStripMenuItem,
             this.borrowToolStripMenuItem});
             this.functionsToolStripMenuItem.Name = "functionsToolStripMenuItem";
             this.functionsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.functionsToolStripMenuItem.Text = "Functions";
-            // 
-            // buyToolStripMenuItem
-            // 
-            this.buyToolStripMenuItem.Name = "buyToolStripMenuItem";
-            this.buyToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.buyToolStripMenuItem.Text = "Buy";
-            this.buyToolStripMenuItem.Click += new System.EventHandler(this.buyToolStripMenuItem_Click);
             // 
             // sellToolStripMenuItem
             // 
@@ -161,18 +154,40 @@ namespace BookStore
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(104, 179);
+            this.NextButton.Location = new System.Drawing.Point(173, 184);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 11;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // BuyButton
+            // 
+            this.BuyButton.Location = new System.Drawing.Point(15, 184);
+            this.BuyButton.Name = "BuyButton";
+            this.BuyButton.Size = new System.Drawing.Size(75, 23);
+            this.BuyButton.TabIndex = 13;
+            this.BuyButton.Text = "Buy";
+            this.BuyButton.UseVisualStyleBackColor = true;
+            // 
+            // StoreChooseButton
+            // 
+            this.StoreChooseButton.Location = new System.Drawing.Point(96, 184);
+            this.StoreChooseButton.Name = "StoreChooseButton";
+            this.StoreChooseButton.Size = new System.Drawing.Size(75, 23);
+            this.StoreChooseButton.TabIndex = 14;
+            this.StoreChooseButton.Text = "Store selection";
+            this.StoreChooseButton.UseVisualStyleBackColor = true;
+            this.StoreChooseButton.Click += new System.EventHandler(this.StoreChooseButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(260, 219);
+            this.Controls.Add(this.StoreChooseButton);
+            this.Controls.Add(this.BuyButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PriceTextbox);
             this.Controls.Add(this.QualityTextbox);
@@ -198,7 +213,6 @@ namespace BookStore
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem functionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sellToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem styleToolStripMenuItem;
@@ -211,6 +225,8 @@ namespace BookStore
         private System.Windows.Forms.TextBox QualityTextbox;
         private System.Windows.Forms.TextBox PriceTextbox;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button BuyButton;
+        private System.Windows.Forms.Button StoreChooseButton;
     }
 }
 

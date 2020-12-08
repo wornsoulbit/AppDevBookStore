@@ -10,17 +10,13 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
+    
     public partial class Main : Form
     {
+        Code.SerializeDeserializeFile serializer = Code.SerializeDeserializeFile.GetInstance();
         public Main()
         {
             InitializeComponent();
-        }
-
-        private void buyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Buy buy = new Buy();
-            buy.Show();
         }
 
         private void sellToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,6 +29,16 @@ namespace BookStore
         {
             Borrow borrow = new Borrow();
             borrow.Show();
+        }
+
+        private void StoreChooseButton_Click(object sender, EventArgs e)
+        {
+            serializer.DeserializeBooks();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

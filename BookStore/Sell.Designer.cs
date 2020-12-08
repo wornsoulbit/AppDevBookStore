@@ -35,26 +35,29 @@ namespace BookStore
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.BookNameTextbox = new System.Windows.Forms.TextBox();
+            this.AuthorTextbox = new System.Windows.Forms.TextBox();
+            this.SnTextbox = new System.Windows.Forms.TextBox();
+            this.PriceUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AddButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.PriceUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // SellButton
             // 
-            this.SellButton.Location = new System.Drawing.Point(51, 129);
+            this.SellButton.Location = new System.Drawing.Point(107, 144);
             this.SellButton.Name = "SellButton";
-            this.SellButton.Size = new System.Drawing.Size(75, 23);
+            this.SellButton.Size = new System.Drawing.Size(86, 23);
             this.SellButton.TabIndex = 0;
             this.SellButton.Text = "Sell";
             this.SellButton.UseVisualStyleBackColor = true;
+            this.SellButton.Click += new System.EventHandler(this.SellButton_Click);
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(174, 129);
+            this.ExitButton.Location = new System.Drawing.Point(199, 144);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.Size = new System.Drawing.Size(89, 23);
             this.ExitButton.TabIndex = 1;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -81,11 +84,11 @@ namespace BookStore
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 97);
+            this.label3.Location = new System.Drawing.Point(25, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Quality:";
+            this.label3.Text = "Serial Number:";
             // 
             // label4
             // 
@@ -96,43 +99,54 @@ namespace BookStore
             this.label4.TabIndex = 5;
             this.label4.Text = "Author:";
             // 
-            // textBox1
+            // BookNameTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 20);
-            this.textBox1.TabIndex = 6;
+            this.BookNameTextbox.Location = new System.Drawing.Point(107, 12);
+            this.BookNameTextbox.Name = "BookNameTextbox";
+            this.BookNameTextbox.Size = new System.Drawing.Size(181, 20);
+            this.BookNameTextbox.TabIndex = 6;
             // 
-            // textBox2
+            // AuthorTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 20);
-            this.textBox2.TabIndex = 7;
+            this.AuthorTextbox.Location = new System.Drawing.Point(107, 38);
+            this.AuthorTextbox.Name = "AuthorTextbox";
+            this.AuthorTextbox.Size = new System.Drawing.Size(181, 20);
+            this.AuthorTextbox.TabIndex = 7;
             // 
-            // textBox3
+            // SnTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(107, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 8;
+            this.SnTextbox.Location = new System.Drawing.Point(107, 90);
+            this.SnTextbox.Name = "SnTextbox";
+            this.SnTextbox.Size = new System.Drawing.Size(181, 20);
+            this.SnTextbox.TabIndex = 9;
             // 
-            // textBox4
+            // PriceUpDown
             // 
-            this.textBox4.Location = new System.Drawing.Point(107, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 20);
-            this.textBox4.TabIndex = 9;
+            this.PriceUpDown.Location = new System.Drawing.Point(107, 65);
+            this.PriceUpDown.Name = "PriceUpDown";
+            this.PriceUpDown.Size = new System.Drawing.Size(181, 20);
+            this.PriceUpDown.TabIndex = 10;
+            // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(9, 144);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(92, 23);
+            this.AddButton.TabIndex = 11;
+            this.AddButton.Text = "Add to counter";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 179);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(400, 179);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.PriceUpDown);
+            this.Controls.Add(this.SnTextbox);
+            this.Controls.Add(this.AuthorTextbox);
+            this.Controls.Add(this.BookNameTextbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -141,6 +155,7 @@ namespace BookStore
             this.Controls.Add(this.SellButton);
             this.Name = "Sell";
             this.Text = "Sell";
+            ((System.ComponentModel.ISupportInitialize)(this.PriceUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,9 +169,10 @@ namespace BookStore
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox BookNameTextbox;
+        private System.Windows.Forms.TextBox AuthorTextbox;
+        private System.Windows.Forms.TextBox SnTextbox;
+        private System.Windows.Forms.NumericUpDown PriceUpDown;
+        private System.Windows.Forms.Button AddButton;
     }
 }
