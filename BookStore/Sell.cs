@@ -20,13 +20,14 @@ namespace BookStore
 
         private void SellButton_Click(object sender, EventArgs e)
         {
-            Code.SerializeDeserializeFile serializer = Code.SerializeDeserializeFile.GetInstance();
+            SerializeDeserializeFile serializer = SerializeDeserializeFile.GetInstance();
 
             List<Customer> cList = new List<Customer>();
             cList.Add(new Customer(0, "", ""));
             BookStore bStore = new BookStore(0, 0, "");
+            List<BorrowedBooks> borrowedBooks = new List<BorrowedBooks>();
 
-            Code.BookStoreInterface store = new Code.BookStoreInterface(bList, bStore, cList);
+            BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowedBooks);
 
             serializer.SerializeObjects(store);
         }

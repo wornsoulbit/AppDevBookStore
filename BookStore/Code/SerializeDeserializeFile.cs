@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
-namespace BookStore.Code {
+namespace BookStore {
     class SerializeDeserializeFile {
 
         private static SerializeDeserializeFile serializeDeserialize;
