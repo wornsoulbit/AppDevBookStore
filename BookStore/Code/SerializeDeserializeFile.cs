@@ -119,7 +119,7 @@ namespace BookStore {
                             book.Days.ToString()
                         };
 
-                        borrowBooks.Add(new BorrowedBooks(values[0], values[1], values[2], Int32.Parse(values[3])));
+                        borrowBooks.Add(new BorrowedBooks(values[0], values[1], values[2], Int32.Parse(values[3]), Double.Parse(values[3])));
                     }
 
                     //Deserializes Customer objects.

@@ -37,6 +37,7 @@ namespace BookStore
             BorrowedBooks b = new BorrowedBooks(bList[count].SerialNum, bList[count].Title, bList[count].Author, days);
 
             borrowList.Add(b);
+            bList.Remove(bList[count]);
 
             BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
 

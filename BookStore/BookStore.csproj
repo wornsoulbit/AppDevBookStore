@@ -55,6 +55,12 @@
       <DependentUpon>Borrow.cs</DependentUpon>
     </Compile>
     <Compile Include="Code\BorrowedBooks.cs" />
+    <Compile Include="Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
     <Compile Include="Return.cs">
       <SubType>Form</SubType>
     </Compile>
