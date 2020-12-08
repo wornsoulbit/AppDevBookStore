@@ -40,7 +40,7 @@ namespace BookStore
             this.label4 = new System.Windows.Forms.Label();
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.AuthorTextbox = new System.Windows.Forms.TextBox();
-            this.QualityTextbox = new System.Windows.Forms.TextBox();
+            this.SnTextbox = new System.Windows.Forms.TextBox();
             this.PriceTextbox = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.BuyButton = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace BookStore
             this.styleToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(266, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,11 +109,11 @@ namespace BookStore
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 115);
+            this.label3.Location = new System.Drawing.Point(33, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Quality:";
+            this.label3.Text = "Serial number:";
             // 
             // label4
             // 
@@ -128,33 +128,33 @@ namespace BookStore
             // 
             this.NameTextbox.Location = new System.Drawing.Point(113, 48);
             this.NameTextbox.Name = "NameTextbox";
-            this.NameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.NameTextbox.Size = new System.Drawing.Size(140, 20);
             this.NameTextbox.TabIndex = 6;
             // 
             // AuthorTextbox
             // 
             this.AuthorTextbox.Location = new System.Drawing.Point(113, 82);
             this.AuthorTextbox.Name = "AuthorTextbox";
-            this.AuthorTextbox.Size = new System.Drawing.Size(100, 20);
+            this.AuthorTextbox.Size = new System.Drawing.Size(140, 20);
             this.AuthorTextbox.TabIndex = 7;
             // 
-            // QualityTextbox
+            // SnTextbox
             // 
-            this.QualityTextbox.Location = new System.Drawing.Point(113, 112);
-            this.QualityTextbox.Name = "QualityTextbox";
-            this.QualityTextbox.Size = new System.Drawing.Size(100, 20);
-            this.QualityTextbox.TabIndex = 8;
+            this.SnTextbox.Location = new System.Drawing.Point(113, 112);
+            this.SnTextbox.Name = "SnTextbox";
+            this.SnTextbox.Size = new System.Drawing.Size(140, 20);
+            this.SnTextbox.TabIndex = 8;
             // 
             // PriceTextbox
             // 
             this.PriceTextbox.Location = new System.Drawing.Point(113, 142);
             this.PriceTextbox.Name = "PriceTextbox";
-            this.PriceTextbox.Size = new System.Drawing.Size(100, 20);
+            this.PriceTextbox.Size = new System.Drawing.Size(140, 20);
             this.PriceTextbox.TabIndex = 9;
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(173, 184);
+            this.NextButton.Location = new System.Drawing.Point(177, 179);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 11;
@@ -164,7 +164,7 @@ namespace BookStore
             // 
             // BuyButton
             // 
-            this.BuyButton.Location = new System.Drawing.Point(15, 184);
+            this.BuyButton.Location = new System.Drawing.Point(15, 179);
             this.BuyButton.Name = "BuyButton";
             this.BuyButton.Size = new System.Drawing.Size(75, 23);
             this.BuyButton.TabIndex = 13;
@@ -174,7 +174,7 @@ namespace BookStore
             // 
             // StoreChooseButton
             // 
-            this.StoreChooseButton.Location = new System.Drawing.Point(96, 184);
+            this.StoreChooseButton.Location = new System.Drawing.Point(96, 179);
             this.StoreChooseButton.Name = "StoreChooseButton";
             this.StoreChooseButton.Size = new System.Drawing.Size(75, 23);
             this.StoreChooseButton.TabIndex = 14;
@@ -186,12 +186,12 @@ namespace BookStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 219);
+            this.ClientSize = new System.Drawing.Size(266, 220);
             this.Controls.Add(this.StoreChooseButton);
             this.Controls.Add(this.BuyButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PriceTextbox);
-            this.Controls.Add(this.QualityTextbox);
+            this.Controls.Add(this.SnTextbox);
             this.Controls.Add(this.AuthorTextbox);
             this.Controls.Add(this.NameTextbox);
             this.Controls.Add(this.label4);
@@ -203,6 +203,7 @@ namespace BookStore
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -223,7 +224,7 @@ namespace BookStore
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox NameTextbox;
         private System.Windows.Forms.TextBox AuthorTextbox;
-        private System.Windows.Forms.TextBox QualityTextbox;
+        private System.Windows.Forms.TextBox SnTextbox;
         private System.Windows.Forms.TextBox PriceTextbox;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button BuyButton;

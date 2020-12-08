@@ -29,7 +29,7 @@ namespace BookStore
         /// </summary>
         private void InitializeComponent()
         {
-            this.BuyButton = new System.Windows.Forms.Button();
+            this.ReturnButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,19 +39,19 @@ namespace BookStore
             this.CardNumberTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // BuyButton
+            // ReturnButton
             // 
-            this.BuyButton.Location = new System.Drawing.Point(15, 137);
-            this.BuyButton.Name = "BuyButton";
-            this.BuyButton.Size = new System.Drawing.Size(75, 23);
-            this.BuyButton.TabIndex = 0;
-            this.BuyButton.Text = "Buy";
-            this.BuyButton.UseVisualStyleBackColor = true;
-            this.BuyButton.Click += new System.EventHandler(this.BuyButton_Click);
+            this.ReturnButton.Location = new System.Drawing.Point(15, 137);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.ReturnButton.TabIndex = 0;
+            this.ReturnButton.Text = "Buy";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(181, 136);
+            this.ExitButton.Location = new System.Drawing.Point(181, 137);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 1;
@@ -111,7 +111,7 @@ namespace BookStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 173);
+            this.ClientSize = new System.Drawing.Size(272, 202);
             this.Controls.Add(this.CardNumberTextbox);
             this.Controls.Add(this.AuthorTextbox);
             this.Controls.Add(this.NameTextbox);
@@ -119,7 +119,7 @@ namespace BookStore
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.BuyButton);
+            this.Controls.Add(this.ReturnButton);
             this.Name = "Return";
             this.Text = "Return";
             this.ResumeLayout(false);
@@ -129,7 +129,7 @@ namespace BookStore
 
         #endregion
 
-        private System.Windows.Forms.Button BuyButton;
+        private System.Windows.Forms.Button ReturnButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

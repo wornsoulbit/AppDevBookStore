@@ -13,7 +13,11 @@ namespace BookStore
     
     public partial class Main : Form
     {
+        List<Customer> cList = new List<Customer>();
+        List<BorrowedBooks> borrowList = new List<BorrowedBooks>();
         List<Book> bList = new List<Book>();
+        BookStore bStore = new BookStore(1, 1, "Employee");
+
         int count = 0;
 
         SerializeDeserializeFile serializer = SerializeDeserializeFile.GetInstance();
@@ -67,25 +71,21 @@ namespace BookStore
 
         private void BuyButton_Click(object sender, EventArgs e)
         {
-            SerializeDeserializeFile serializer = SerializeDeserializeFile.GetInstance();
+            Book book = new Book(bList[count].SerialNum, bList[count].Title, bList[count].Author, bList[count].Price);
 
-            List<Customer> cList = new List<Customer>();
-
-            List<BorrowedBooks> borrowList = new List<BorrowedBooks>();
-
-            List<Book> bList = new List<Book>();
-            Book book = new Book("Test", "Test", "Test", 20.00);
-            Customer cust = new Customer(3, "Justin", "123");
-
-            cList.Add(cust);
-
-            bList.Add(book);
-
-            BookStore bStore = new BookStore(1, 3, "Son of a bitch");
+            bList.Remove(book);
 
             BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
 
             serializer.SerializeObjects(store);
+
+            count = 0;
+            ShowDetails();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
