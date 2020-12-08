@@ -11,9 +11,9 @@ namespace BookStore.Code {
         private static SerializeDeserializeFile serializeDeserialize;
 
         //Storing the deserialized outputs from the deserialization process.
-        private List<Book> books = new List<Book>();
-        private List<Customer> customers = new List<Customer>();
-        private List<BookStore> bookStores = new List<BookStore>();
+        public List<Book> books = new List<Book>();
+        public List<Customer> customers = new List<Customer>();
+        public List<BookStore> bookStores = new List<BookStore>();
 
         private BinaryFormatter formatter = new BinaryFormatter();
         private FileStream output;
@@ -113,10 +113,9 @@ namespace BookStore.Code {
                 catch (SerializationException)
                 {
                     input.Close();
-                    MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("No more records in file", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                input.Close();
             }
         }
         //Probably will be replaced need to test the new methods 
