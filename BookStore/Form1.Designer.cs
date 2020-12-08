@@ -35,7 +35,10 @@ namespace BookStore
             this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+>>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,15 +50,17 @@ namespace BookStore
             this.NextButton = new System.Windows.Forms.Button();
             this.BuyButton = new System.Windows.Forms.Button();
             this.StoreChooseButton = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.ExitButton = new System.Windows.Forms.Button();
+=======
+>>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.functionsToolStripMenuItem,
-            this.styleToolStripMenuItem});
+            this.functionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(282, 24);
@@ -90,11 +95,16 @@ namespace BookStore
             // returnToolStripMenuItem
             // 
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+<<<<<<< HEAD
             this.returnToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+=======
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+>>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             this.returnToolStripMenuItem.Text = "Return";
             this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // memberToolStripMenuItem
+<<<<<<< HEAD
             // 
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
             this.memberToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
@@ -102,10 +112,13 @@ namespace BookStore
             this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
             // 
             // styleToolStripMenuItem
+=======
+>>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             // 
-            this.styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            this.styleToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.styleToolStripMenuItem.Text = "Style";
+            this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.memberToolStripMenuItem.Text = "Create an account";
+            this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -201,6 +214,7 @@ namespace BookStore
             this.StoreChooseButton.UseVisualStyleBackColor = true;
             this.StoreChooseButton.Click += new System.EventHandler(this.StoreChooseButton_Click);
             // 
+<<<<<<< HEAD
             // ExitButton
             // 
             this.ExitButton.Location = new System.Drawing.Point(96, 218);
@@ -211,6 +225,8 @@ namespace BookStore
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+=======
+>>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +264,6 @@ namespace BookStore
         private System.Windows.Forms.ToolStripMenuItem functionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sellToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem styleToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

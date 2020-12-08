@@ -82,36 +82,36 @@ namespace BookStore
             // 
             this.FnameTextbox.Location = new System.Drawing.Point(95, 37);
             this.FnameTextbox.Name = "FnameTextbox";
-            this.FnameTextbox.Size = new System.Drawing.Size(123, 20);
+            this.FnameTextbox.Size = new System.Drawing.Size(227, 20);
             this.FnameTextbox.TabIndex = 5;
             // 
             // lnameTextbox
             // 
             this.lnameTextbox.Location = new System.Drawing.Point(95, 63);
             this.lnameTextbox.Name = "lnameTextbox";
-            this.lnameTextbox.Size = new System.Drawing.Size(123, 20);
+            this.lnameTextbox.Size = new System.Drawing.Size(227, 20);
             this.lnameTextbox.TabIndex = 6;
             // 
             // CardTextbox
             // 
             this.CardTextbox.Location = new System.Drawing.Point(95, 89);
             this.CardTextbox.Name = "CardTextbox";
-            this.CardTextbox.Size = new System.Drawing.Size(123, 20);
+            this.CardTextbox.Size = new System.Drawing.Size(227, 20);
             this.CardTextbox.TabIndex = 7;
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(22, 154);
+            this.SubmitButton.Location = new System.Drawing.Point(95, 134);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 8;
-            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.Text = "Register";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(120, 154);
+            this.ExitButton.Location = new System.Drawing.Point(247, 134);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 9;
@@ -123,14 +123,14 @@ namespace BookStore
             // 
             this.IDnum.Location = new System.Drawing.Point(95, 13);
             this.IDnum.Name = "IDnum";
-            this.IDnum.Size = new System.Drawing.Size(120, 20);
+            this.IDnum.Size = new System.Drawing.Size(227, 20);
             this.IDnum.TabIndex = 10;
             // 
             // Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(230, 218);
+            this.ClientSize = new System.Drawing.Size(376, 174);
             this.Controls.Add(this.IDnum);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.SubmitButton);
@@ -142,7 +142,7 @@ namespace BookStore
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Member";
-            this.Text = "Member";
+            this.Text = "Please enter the required information";
             ((System.ComponentModel.ISupportInitialize)(this.IDnum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
