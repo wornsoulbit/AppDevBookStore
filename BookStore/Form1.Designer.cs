@@ -35,10 +35,8 @@ namespace BookStore
             this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
-            this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-=======
->>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
+
+
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,10 +48,9 @@ namespace BookStore
             this.NextButton = new System.Windows.Forms.Button();
             this.BuyButton = new System.Windows.Forms.Button();
             this.StoreChooseButton = new System.Windows.Forms.Button();
-<<<<<<< HEAD
+
             this.ExitButton = new System.Windows.Forms.Button();
-=======
->>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
+
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,16 +92,13 @@ namespace BookStore
             // returnToolStripMenuItem
             // 
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-<<<<<<< HEAD
+
             this.returnToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-=======
             this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
->>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             this.returnToolStripMenuItem.Text = "Return";
             this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // memberToolStripMenuItem
-<<<<<<< HEAD
             // 
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
             this.memberToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
@@ -112,8 +106,6 @@ namespace BookStore
             this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
             // 
             // styleToolStripMenuItem
-=======
->>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             // 
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
             this.memberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -214,7 +206,6 @@ namespace BookStore
             this.StoreChooseButton.UseVisualStyleBackColor = true;
             this.StoreChooseButton.Click += new System.EventHandler(this.StoreChooseButton_Click);
             // 
-<<<<<<< HEAD
             // ExitButton
             // 
             this.ExitButton.Location = new System.Drawing.Point(96, 218);
@@ -225,8 +216,6 @@ namespace BookStore
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-=======
->>>>>>> 6f878fb1142329ce67611a39a6e7e0f47f4b1559
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
