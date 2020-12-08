@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore {
+namespace BookStore.Code {
     [Serializable]
     class Book {
         public string SerialNum { get; set; }

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.Code
-{
+namespace BookStore.Code {
     [Serializable]
-    class BorrowedBooks
-    {
+    class BorrowedBooks {
         public string SerialNum { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
@@ -16,10 +14,10 @@ namespace BookStore.Code
 
         public BorrowedBooks() { }
 
-        public BorrowedBooks(String serialNum, String title, String author, int days)
+        public BorrowedBooks(string serialNum, string title, string author, int days)
         {
             SerialNum = serialNum;
-            Title = Title;
+            Title = title;
             Author = author;
             Days = days;
         }

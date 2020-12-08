@@ -12,11 +12,11 @@ namespace BookStore.Code
         public List<Book> Book { get; set; }
         public BookStore BookStore { get; set; }
         public List<Customer> Customer { get; set; }
-        public List<Borrow> Borrow { get; set; }
+        public List<BorrowedBooks> Borrow { get; set; }
 
         public BookStoreInterface() { }
 
-        public BookStoreInterface(List<Book> book, BookStore bookStore, List<Customer> customer, List<Borrow> borrow) 
+        public BookStoreInterface(List<Book> book, BookStore bookStore, List<Customer> customer, List<BorrowedBooks> borrow) 
         { 
             Book = book; 
             BookStore = bookStore;
