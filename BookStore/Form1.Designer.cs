@@ -45,6 +45,8 @@ namespace BookStore
             this.NextButton = new System.Windows.Forms.Button();
             this.BuyButton = new System.Windows.Forms.Button();
             this.StoreChooseButton = new System.Windows.Forms.Button();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +65,9 @@ namespace BookStore
             // 
             this.functionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sellToolStripMenuItem,
-            this.borrowToolStripMenuItem});
+            this.borrowToolStripMenuItem,
+            this.returnToolStripMenuItem,
+            this.memberToolStripMenuItem});
             this.functionsToolStripMenuItem.Name = "functionsToolStripMenuItem";
             this.functionsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.functionsToolStripMenuItem.Text = "Functions";
@@ -71,14 +75,14 @@ namespace BookStore
             // sellToolStripMenuItem
             // 
             this.sellToolStripMenuItem.Name = "sellToolStripMenuItem";
-            this.sellToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.sellToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sellToolStripMenuItem.Text = "Sell";
             this.sellToolStripMenuItem.Click += new System.EventHandler(this.sellToolStripMenuItem_Click);
             // 
             // borrowToolStripMenuItem
             // 
             this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
-            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.borrowToolStripMenuItem.Text = "Borrow";
             this.borrowToolStripMenuItem.Click += new System.EventHandler(this.borrowToolStripMenuItem_Click);
             // 
@@ -182,6 +186,20 @@ namespace BookStore
             this.StoreChooseButton.UseVisualStyleBackColor = true;
             this.StoreChooseButton.Click += new System.EventHandler(this.StoreChooseButton_Click);
             // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
+            // 
+            // memberToolStripMenuItem
+            // 
+            this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.memberToolStripMenuItem.Text = "Member";
+            this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +248,8 @@ namespace BookStore
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button BuyButton;
         private System.Windows.Forms.Button StoreChooseButton;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem memberToolStripMenuItem;
     }
 }
 

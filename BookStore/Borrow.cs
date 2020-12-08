@@ -57,7 +57,9 @@ namespace BookStore
         private void CatalogButton_Click(object sender, EventArgs e)
         {
             serializer.DeserializeObjbects();
+            cList = serializer.GetCustomerList();
             bList = serializer.GetBookList();
+            borrowList = serializer.GetBorrowedBooks();
             ShowDetails();
         }
 

@@ -39,7 +39,7 @@ namespace BookStore
             bList.Add(b);
             borrowList.Remove(borrowList[count]);
 
-            BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
+                        BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
 
             serializer.SerializeObjects(store);
 
@@ -50,7 +50,9 @@ namespace BookStore
         private void CatalogButton_Click(object sender, EventArgs e)
         {
             serializer.DeserializeObjbects();
+            cList = serializer.GetCustomerList();
             bList = serializer.GetBookList();
+            borrowList = serializer.GetBorrowedBooks();
             ShowDetails();
         }
 

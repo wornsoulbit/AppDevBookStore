@@ -42,7 +42,9 @@ namespace BookStore
         private void StoreChooseButton_Click(object sender, EventArgs e)
         {
             serializer.DeserializeObjbects();
+            cList = serializer.GetCustomerList();
             bList = serializer.GetBookList();
+            borrowList = serializer.GetBorrowedBooks();
             ShowDetails();
         }
 
@@ -88,6 +90,18 @@ namespace BookStore
         private void Main_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Return returnForm = new Return();
+            returnForm.Show();
+        }
+
+        private void memberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Member member = new Member();
+            member.Show();
         }
     }
 }
