@@ -77,7 +77,7 @@ namespace BookStore
         {
             Book book = new Book(bList[count].SerialNum, bList[count].Title, bList[count].Author, bList[count].Price);
 
-            bList.Remove(book);
+            bList.Remove(bList[count]);
 
             BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
 

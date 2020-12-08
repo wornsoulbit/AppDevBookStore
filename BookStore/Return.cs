@@ -39,10 +39,13 @@ namespace BookStore
             bList.Add(b);
             borrowList.Remove(borrowList[count]);
 
-                        BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
+            BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
 
             serializer.SerializeObjects(store);
-
+            if (borrowList.Count == 0)
+            {
+                this.Close();
+            }
             count = 0;
             ShowDetails();
         }
@@ -73,9 +76,9 @@ namespace BookStore
         }
         private void ShowDetails()
         {
-            NameTextbox.Text = bList[count].Title;
-            AuthorTextbox.Text = bList[count].Author;
-            SnTextbox.Text = bList[count].SerialNum;
+            NameTextbox.Text = borrowList[count].Title;
+            AuthorTextbox.Text = borrowList[count].Author;
+            SnTextbox.Text = borrowList[count].SerialNum;
         }
 
         private void ExitButton_Click_1(object sender, EventArgs e)
