@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
-    public partial class Buy : Form
+    public partial class Return : Form
     {
-        public Buy()
+        public Return()
         {
             InitializeComponent();
         }

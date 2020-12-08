@@ -15,7 +15,7 @@ namespace BookStore {
 
         public BookStore(int bookId, int custId, string bookSerialNum) 
         {
-            BookId = BookId;
+            BookId = bookId;
             CustId = custId;
             BookSerialNum = bookSerialNum;
         }
