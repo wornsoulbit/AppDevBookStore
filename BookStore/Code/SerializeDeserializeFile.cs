@@ -56,7 +56,14 @@ namespace BookStore.Code {
             //Tries to Serialize the data to a given file.
             try
             {
-                formatter.Serialize(output, bookStoreInterface);
+                if (output != null)
+                {
+                    formatter.Serialize(output, bookStoreInterface);
+                } 
+                else
+                {
+                    return;
+                }
             }
             catch (SerializationException)
             {
