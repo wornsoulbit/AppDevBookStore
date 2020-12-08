@@ -11,9 +11,9 @@ namespace BookStore.Code {
         private static SerializeDeserializeFile serializeDeserialize;
 
         //Storing the deserialized outputs from the deserialization process.
-        public List<Book> books = new List<Book>();
-        public List<Customer> customers = new List<Customer>();
-        public List<BookStore> bookStores = new List<BookStore>();
+        private List<Book> books = new List<Book>();
+        private List<Customer> customers = new List<Customer>();
+        private List<BookStore> bookStores = new List<BookStore>();
 
         private BinaryFormatter formatter = new BinaryFormatter();
         private FileStream output;
@@ -31,6 +31,21 @@ namespace BookStore.Code {
         private static void CreateInstance()
         {
             serializeDeserialize = new SerializeDeserializeFile();
+        }
+
+        public List<Book> GetBookList()
+        {
+            return books;
+        }
+
+        public List<Customer> GetCustomerList()
+        {
+            return customers;
+        }
+
+        public List<BookStore> GetBookStores()
+        {
+            return bookStores;
         }
 
         public void SerializeObjects(BookStoreInterface bookStoreInterface)
