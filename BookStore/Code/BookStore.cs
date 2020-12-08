@@ -13,6 +13,11 @@ namespace BookStore {
 
         public BookStore() { }
 
-        public BookStore(int bookId, int custId, string bookSerialNum) { }
+        public BookStore(int bookId, int custId, string bookSerialNum) 
+        {
+            BookId = BookId;
+            CustId = custId;
+            BookSerialNum = bookSerialNum;
+        }
     }
 }

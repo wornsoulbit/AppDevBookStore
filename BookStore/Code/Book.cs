@@ -14,7 +14,13 @@ namespace BookStore {
 
         public Book() { }
 
-        public Book(string serialNum, string title, string author, double price) { }
+        public Book(string serialNum, string title, string author, double price) 
+        {
+            SerialNum = serialNum;
+            Title = title;
+            Author = author;
+            Price = price;
+        }
 
     }
 }
