@@ -70,6 +70,8 @@ namespace BookStore
 
             List<Customer> cList = new List<Customer>();
 
+            List<Borrow> borrowList = new List<Borrow>();
+
             List<Book> bList = new List<Book>();
             Book book = new Book("Test", "Test", "Test", 20.00);
             Customer cust = new Customer(3, "Justin", "123");
@@ -80,7 +82,7 @@ namespace BookStore
 
             BookStore bStore = new BookStore(1, 3, "Son of a bitch");
 
-            Code.BookStoreInterface store = new Code.BookStoreInterface(bList, bStore, cList);
+            Code.BookStoreInterface store = new Code.BookStoreInterface(bList, bStore, cList, borrowList);
 
             serializer.SerializeObjects(store);
         }

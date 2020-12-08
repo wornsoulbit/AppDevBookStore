@@ -54,11 +54,12 @@
     <Compile Include="Borrow.Designer.cs">
       <DependentUpon>Borrow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Buy.cs">
+    <Compile Include="Code\BorrowedBooks.cs" />
+    <Compile Include="Return.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buy.Designer.cs">
-      <DependentUpon>Buy.cs</DependentUpon>
+    <Compile Include="Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
     </Compile>
     <Compile Include="Code\BookStoreInterface.cs" />
     <Compile Include="Code\Customer.cs" />
@@ -80,8 +81,8 @@
     <EmbeddedResource Include="Borrow.resx">
       <DependentUpon>Borrow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buy.resx">
-      <DependentUpon>Buy.cs</DependentUpon>
+    <EmbeddedResource Include="Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

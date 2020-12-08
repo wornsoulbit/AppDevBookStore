@@ -14,6 +14,7 @@ namespace BookStore.Code {
         private List<Book> books = new List<Book>();
         private List<Customer> customers = new List<Customer>();
         private List<BookStore> bookStores = new List<BookStore>();
+        private List<BorrowedBooks> borrowBooks = new List<BorrowedBooks>();
 
         private BinaryFormatter formatter = new BinaryFormatter();
         private FileStream output;
@@ -96,6 +97,20 @@ namespace BookStore.Code {
                         }
                     }
 
+                    foreach(BorrowedBooks bor in bookStoreInterface.Borrow)
+                    {
+                        if(bor.SerialNum != string.Empty)
+                        {
+                            string[] values = new string[]
+                            {
+                                bor.SerialNum.ToString(),
+                                bor.Author.ToString(),
+                                bor.Title.ToString(),
+                                bor.Days.ToString(),
+                            };
+                        }
+                    }
+
                     //Deserializes Customer objects.
                     foreach (Customer cust in bookStoreInterface.Customer)
                     {
@@ -124,6 +139,8 @@ namespace BookStore.Code {
 
                         bookStores.Add(new BookStore(Int32.Parse(values[2]), Int32.Parse(values[1]), values[0]));
                     }
+
+                    
                 }
                 catch (SerializationException)
                 {

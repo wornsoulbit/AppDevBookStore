@@ -1,7 +1,7 @@
 ﻿
 namespace BookStore
 {
-    partial class Buy
+    partial class Return
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@ namespace BookStore
             this.CardNumberTextbox.Size = new System.Drawing.Size(143, 20);
             this.CardNumberTextbox.TabIndex = 7;
             // 
-            // Buy
+            // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,8 +120,8 @@ namespace BookStore
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.BuyButton);
-            this.Name = "Buy";
-            this.Text = "Buy";
+            this.Name = "Return";
+            this.Text = "Return";
             this.ResumeLayout(false);
             this.PerformLayout();
 
