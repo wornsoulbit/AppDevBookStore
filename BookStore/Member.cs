@@ -33,6 +33,7 @@ namespace BookStore
             String card = CardTextbox.Text;
 
             Customer c = new Customer(id, name, card);
+            cList.Add(c);
 
             BookStoreInterface store = new BookStoreInterface(bList, bStore, cList, borrowList);
 

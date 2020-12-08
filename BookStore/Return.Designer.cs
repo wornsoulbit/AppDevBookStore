@@ -125,7 +125,7 @@ namespace BookStore
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 31;
-            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.Text = "Return";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 

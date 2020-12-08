@@ -141,7 +141,7 @@ namespace BookStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 179);
+            this.ClientSize = new System.Drawing.Size(328, 179);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.PriceUpDown);
             this.Controls.Add(this.SnTextbox);

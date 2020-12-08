@@ -56,6 +56,14 @@ namespace BookStore
             cList = serializer.GetCustomerList();
             bList = serializer.GetBookList();
             borrowList = serializer.GetBorrowedBooks();
+            if(cList.Count == 0)
+            {
+                SubmitButton.Enabled = false;
+            }
+            else
+            {
+                SubmitButton.Enabled = true;
+            }
             ShowDetails();
         }
 

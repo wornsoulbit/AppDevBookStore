@@ -45,6 +45,14 @@ namespace BookStore
             cList = serializer.GetCustomerList();
             bList = serializer.GetBookList();
             borrowList = serializer.GetBorrowedBooks();
+            if(cList.Count == 0)
+            {
+                BuyButton.Enabled = false;
+            }
+            else
+            {
+                BuyButton.Enabled = true;
+            }
             ShowDetails();
         }
 
@@ -102,6 +110,11 @@ namespace BookStore
         {
             Member member = new Member();
             member.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

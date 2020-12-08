@@ -52,6 +52,7 @@ namespace BookStore
             this.ExitButton.TabIndex = 15;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click_1);
             // 
             // SubmitButton
             // 
